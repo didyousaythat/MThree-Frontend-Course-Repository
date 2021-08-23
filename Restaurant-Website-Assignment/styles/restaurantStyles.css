@@ -1,0 +1,57 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: khaki;
+    color: maroon;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    background-color: darkgreen;
+    color: ivory;
+}
+
+hr{
+    margin: 0px;
+}
+
+nav{
+    text-align: left;
+    background-color: darkred;
+}
+
+a.nav-link{
+    color: aqua;
+}
+
+.col{
+    padding: 10px;
+}
+
+.page-wrapper{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content-wrapper{
+    padding-top: 10px;
+    flex-grow: 1;
+}
+
+footer{
+    background-color: forestgreen;
+    color: antiquewhite;
+    margin-top: 20px;
+    bottom:0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu{
+    background-color: rgb(71, 163, 68);
+}
