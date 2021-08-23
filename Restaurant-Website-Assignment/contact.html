@@ -46,11 +46,13 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-    <div class="page-wrapper">
+    <!--Overarching page wrapper-->
+        <div class="page-wrapper">
         <Header>
             <h1 style="margin-bottom: 0px;">Big Joe's BBQ Shack</h1>
         </Header>
 
+        <!--Navigation bar-->
         <nav>
             <ul class="nav nav-pills">
                 <li class="nav-item">
@@ -65,6 +67,7 @@
             </ul>
         </nav>
 
+        <!--Main wrapper div for contact form sheet-->
         <div class="content-wrapper">
 
 
@@ -120,6 +123,7 @@
 
         </div>
 
+        <!--footer section-->
         <footer>
             <hr>
             <p>4468 W High Street, Boulder, Colorado, 77469</p>
@@ -131,6 +135,7 @@
 </html>
 
 <script>
+    /*Rudimentary function to check if sections of form are filled*/
     function validateForm() {
         let name = document.forms["contactUs"]["name"].value;
         let email = document.forms["contactUs"]["email"].value;
@@ -162,6 +167,7 @@
         return true;
     }
 
+    /*reloads page on reset button push*/
     function refreshPage() {
         location.reload();
     }
