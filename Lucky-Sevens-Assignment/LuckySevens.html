@@ -33,7 +33,6 @@
         var die2 = 0;
         var currentDie = 0;
         var totalRolls = 0;
-        var badRolls = 0;
         var money = initialBet;
         var moneyHeld = [initialBet];
         var maxHeld = 0;
@@ -57,17 +56,16 @@
                 // WIN
                 if (currentDie == 7) {
                     money = money + win; // add $4 to money for winning
-                    lastElement = moneyHeld[moneyHeld.length - 1]; // get value of last element of moneyHeld array that is used to show current money held by player after last roll
-                    lastUpdated = lastElement + win; // add $4 to previous roll winnings and stores in lastUpdated
-                    moneyHeld.push(lastUpdated);
+                    lastElement = moneyHeld[moneyHeld.length - 1]; // Update the moneyHeld array so that the most recent money total is inserted
+                    lastUpdated = lastElement + win; // add $4 to the last element about to be inserted
+                    moneyHeld.push(lastUpdated); //insert the element into the array
 
                 // LOSE
                 } else {
-                    money--;
-                    badRolls++;
-                    lastElement = moneyHeld[moneyHeld.length - 1];
-                    lastUpdated = lastElement - loss;
-                    moneyHeld.push(lastUpdated);
+                    money--; // take $1 from money
+                    lastElement = moneyHeld[moneyHeld.length - 1]; // update array so last element has the most recent money results
+                    lastUpdated = lastElement - loss; // subtract the loss of money to the last element
+                    moneyHeld.push(lastUpdated);// add the new recent total money
                 }
 
 
